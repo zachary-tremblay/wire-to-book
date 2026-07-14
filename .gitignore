@@ -1,0 +1,56 @@
+
+# ---- Verilator ----
+obj_dir/
+*.vcd
+*.fst
+*.fst.hier
+
+# ---- Quartus ----
+# Keep: syn/quartus/*.qsf (project settings), *.sdc (constraints),
+#       and syn/results/ (fitter + timing reports — commit these with `git add -f`).
+# Ignore: everything the tool regenerates.
+db/
+incremental_db/
+output_files/
+simulation/
+greybox_tmp/
+hc_output/
+hps_isw_handoff/
+.qsys_edit/
+*.qws
+*.rpt
+*.summary
+*.smsg
+*.pin
+*.sof
+*.pof
+*.jdi
+*.done
+*.qar
+*.bak
+PLLJ_PLLSPE_INFO.txt
+
+# ---- Build ----
+*.o
+*.d
+*.a
+*.so
+bin/
+build/
+
+# ---- Generated stimulus ----
+# The generator + a fixed seed IS the source of truth. The pcaps are reproducible.
+data/*.pcap
+data/*.msgs
+
+# ---- Python ----
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# ---- Editor / OS ----
+.vscode/
+.idea/
+*.swp
+.DS_Store
